@@ -13,7 +13,7 @@ import {
 import Image from 'next/image'
 import logo from '../../../public/assets/logo-w.png'
 
-const NewHeader = memo(function NewHeader() {
+const NewHeader = memo(function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -34,7 +34,7 @@ const NewHeader = memo(function NewHeader() {
             className="-m-2.5 inline-flex items-center justify-center p-2.5"
           >
             <span className="sr-only">Open mobile menu</span>
-            <Bars3Icon aria-hidden="true" className="size-6 mobile-hamburger" />
+            <Bars3Icon aria-hidden="true" className="size-10 mobile-hamburger" />
           </button>
         </div>
         <div className="lg:flex hidden w-full h-5 items-center justify-between">
@@ -79,7 +79,7 @@ const NewHeader = memo(function NewHeader() {
                 className="-m-2.5 rounded-md p-2.5"
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="size-6 mobile-x-mark" />
+                <XMarkIcon aria-hidden="true" className="size-10 mobile-x-mark" />
               </button>
             </div>
             <div className="mt-6 flow-root">

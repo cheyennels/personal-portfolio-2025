@@ -2,7 +2,7 @@ import { schibsted } from "./ui/fonts";
 import "./globals.css";
 import Image from "next/image";
 import treeFooter from '../../public/assets/tree-footer.png';
-import NewHeader from "./components/NewHeader";
+import Header from "./components/Header";
 
 export default function RootLayout({
   children,
@@ -14,7 +14,7 @@ export default function RootLayout({
       <body
         className={`${schibsted.className} antialiased`}
       >
-        <NewHeader />
+        <Header />
         <div className="layout-container">
           <main className="min-h-screen pt-20">
             {children}

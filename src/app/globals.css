@@ -98,8 +98,6 @@ body {
 
 .nav-link:hover {
   color: var(--primary);
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
   cursor: pointer;
 }
 
