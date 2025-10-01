@@ -1,20 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* ==================== Global Reset ==================== */
 * {
   background-color: inherit;
 }
 
 html {
-  background: #f8f8ff;
-  background-color: #f8f8ff;
+  background: #111419;
+  background-color: #111419;
 }
 
+/* ==================== CSS Variables ==================== */
 :root {
-  --background: #f8f8ff;
-  --foreground: #111419;
+  --background: #111419;
+  --foreground: #f8f8ff;
   --primary: #dc2626;
   --secondary: #d6dbdb;
-  
+
   /* Custom font styles */
   --font-display: 'Schibsted Grotesk', sans-serif;
   --font-body: 'Schibsted Grotesk', sans-serif;
@@ -30,45 +32,61 @@ html {
 }
 
 body {
-  background: #f8f8ff;
-  background-color: #f8f8ff;
-  color: var(--color-foreground);
+  background: var(--background);
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: var(--font-body);
 }
 
-/* text styles */
+/* ==================== Typography ==================== */
+.text-hero {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--primary);
+  background-color: transparent;
+}
+
 .text-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   color: var(--foreground);
 }
 
 .text-large {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 2.5rem; /* 40px */
+  font-size: 2.5rem;
   color: var(--foreground);
 }
 
 .text-body {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 1rem; /* 19.2px */
-  color: gray-600;
+  font-size: 1rem;
+  color: #9ca3af;
 }
 
-/* Layout container - controls max-width for entire site */
+.body-hero {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+/* ==================== Layout ==================== */
 .layout-container {
   max-width: 900px;
   margin: 0 auto;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .header-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding-top: 2rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -76,24 +94,14 @@ body {
   justify-content: space-between;
 }
 
-/* logo ribbon styles */
-.logo-container {
-  background-color: var(--foreground);
-  display: flex;
-  height: 200px;
-  width: 120px;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 25px;
-  top: 0
-}
-
+/* ==================== Navigation ==================== */
 .nav-link {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1.25rem;
   color: var(--foreground);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -101,31 +109,36 @@ body {
   cursor: pointer;
 }
 
-/* Override container constraints for mobile */
-@media (max-width: 1023px) {
-  .header-container {
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    height: 60px
-  }
+/* ==================== Images ==================== */
+.mask-square {
+  width: 400px;
+  height: 470px;
+  overflow: hidden;
 }
 
-/* Mobile Navigation Styles */
-.mobile-logo-ribbon {
-  position: absolute;
-  left: 2.5rem;
-  top: 0;
-  height: 6.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--foreground);
-  width: 5.625rem;
+.mask-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
+/* ==================== Icons ==================== */
+.icon {
+  fill: var(--foreground);
+  transition: fill 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.icon:hover {
+  fill: var(--primary);
+}
+
+/* ==================== Mobile Navigation ==================== */
 .mobile-menu {
-  background-color: var(--secondary);
+  background-color: var(--background);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -138,9 +151,66 @@ body {
 }
 
 .mobile-hamburger {
+  padding-top: 10px;
   color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.mobile-hamburger:hover {
+  color: var(--primary);
 }
 
 .mobile-x-mark {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+}
+
+.mobile-x-mark:hover {
   color: var(--primary);
+}
+
+/* ==================== Footer ==================== */
+.footer-date {
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ==================== Animations ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* ==================== Responsive Overrides ==================== */
+@media (max-width: 1023px) {
+  .header-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+  }
+
+  .text-hero {
+    font-size: 2rem;
+  }
+
+  .text-title {
+    font-size: 1.25rem;
+  }
+
+  .text-large {
+    font-size: 2rem;
+  }
 }

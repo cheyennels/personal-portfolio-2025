@@ -1,15 +1,52 @@
+import Image from 'next/image'
+import portrait from '../../public/assets/illustration/me-1.jpg'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Home() {
   return (
-    <div className="items-center justify-items-center p-8 gap-16">
-      <main className="flex flex-col items-center">
-        <h1 className="text-large">Welcome to my portfolio!</h1>
-        <p className="text-body">I'm a UX/UI-focused frontend developer who enjoys building products that are not only functional but also fun to use. In my work I've helped design and implement component-based design systems, streamlined development with tools like Storybook and React, and delivered polished interfaces across web and mobile.</p>
-        
-        <p className="text-body">I like working at the intersection of design and code—making sure that what gets built feels as good as it looks. Whether it's collaborating with designers, improving team consistency with design systems, or experimenting with new tools and patterns, I'm always looking for ways to make the process smoother and the end result more engaging.</p>
-        
-        <p className="text-body">I'm currently working on a personal app that blends cute aesthetics with motivation to get outside and be active. Sharing my progress helps me grow as both a designer and a developer, and I love connecting with others who are passionate about making tech more human and enjoyable.</p>
-      </main>
+    <div className="flex lg:flex-row flex-col-reverse items-center justify-center w-full lg:gap-0 gap-10 h-full fade-in">
+      <div>
+        <h1 className="text-hero w-full lg:pt-20 lg:absolute lg:top-50">
+          Cheyenne Lee Smith
+        </h1>
+        <h2 className="text-title">I design. I code. I create.</h2>
+        <p className="body-hero">
+          Turning ideas into beautiful experiences people enjoy.
+        </p>
+        <div className="flex flex-row gap-4 pt-10">
+          <a
+            href="https://github.com/cheyennels"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit my GitHub profile"
+          >
+            <FaGithub className="icon" />
+          </a>
+          <a
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit my LinkedIn profile"
+          >
+            <FaLinkedin className="icon" />
+          </a>
+        </div>
+      </div>
+      <Image
+        src={portrait}
+        alt="A picture of Cheyenne"
+        width={500}
+        height={400}
+        className="hidden lg:block"
+      />
+      <div className="mask-square block lg:hidden">
+        <Image
+          src={portrait}
+          alt="A picture of Cheyenne"
+          width={300}
+          height={300}
+        />
+      </div>
     </div>
-  );
+  )
 }

@@ -1,15 +1,8 @@
 'use client'
 
 import { useState, memo } from 'react'
-import {
-  Dialog,
-  DialogPanel,
-  TransitionChild,
-} from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { Dialog, DialogPanel, TransitionChild } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import logo from '../../../public/assets/logo-w.png'
 
@@ -17,52 +10,59 @@ const NewHeader = memo(function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="w-screen drop-shadow-md">
+    <header className="w-screen">
       <nav aria-label="Global" className="header-container">
-        <div className="flex w-full px-10 items-center lg:hidden justify-end">
-          <div className="mobile-logo-ribbon">
-            <Image
-              src={logo}
-              alt="Logo with trees and sun"
-              width={60}
-              height={60}            
-            />
-          </div>
+        <div className="flex w-full px-10 items-center lg:hidden justify-between">
+          <Image
+            src={logo}
+            alt="Logo with trees and sun"
+            width={60}
+            height={60}
+            className="mt-10"
+          />
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center p-2.5"
           >
             <span className="sr-only">Open mobile menu</span>
-            <Bars3Icon aria-hidden="true" className="size-10 mobile-hamburger" />
+            <Bars3Icon
+              aria-hidden="true"
+              className="size-12 mobile-hamburger mt-5"
+            />
           </button>
         </div>
-        <div className="lg:flex hidden w-full h-5 items-center justify-between">
-        <a href="/" className="nav-link">
-            Home
-          </a>
-          <a href="/resume" className="nav-link">
-            Resume  
-          </a>
-           {/* logo ribbon */}
-           <div className="logo-container">
-            <Image
-              src={logo}
-              alt="Logo with trees and sun"
-              width={80}
-              height={80}
-            />
+
+        <div className="lg:flex hidden w-full h-10 items-center justify-between">
+          <Image
+            src={logo}
+            alt="Logo with trees and sun"
+            width={60}
+            height={60}
+          />
+
+          <div className="flex flex-row gap-12">
+            <a href="/" className="nav-link">
+              Home
+            </a>
+            <a href="/resume" className="nav-link">
+              Resume
+            </a>
+
+            <a href="/design" className="nav-link">
+              Design
+            </a>
+            <a href="/dev" className="nav-link">
+              Dev Work
+            </a>
           </div>
-          <a href="/design" className="nav-link">
-            Design
-          </a>
-          <a href="/dev" className="nav-link">
-            Dev Work
-          </a>
         </div>
-       
       </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
         <TransitionChild
           enter="transition-transform duration-300 ease-out"
           enterFrom="translate-x-full"
@@ -79,7 +79,10 @@ const NewHeader = memo(function Header() {
                 className="-m-2.5 rounded-md p-2.5"
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="size-10 mobile-x-mark" />
+                <XMarkIcon
+                  aria-hidden="true"
+                  className="size-10 mobile-x-mark"
+                />
               </button>
             </div>
             <div className="mt-6 flow-root">
