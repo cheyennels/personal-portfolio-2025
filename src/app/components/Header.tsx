@@ -13,23 +13,20 @@ const NewHeader = memo(function Header() {
     <header className="w-screen">
       <nav aria-label="Global" className="header-container">
         <div className="flex w-full px-10 items-center lg:hidden justify-between">
+          {/* mobile logo */}
           <Image
             src={logo}
             alt="Logo with trees and sun"
-            width={60}
-            height={60}
-            className="mt-10"
+            width={40}
+            height={40}
           />
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center p-2.5"
+            className="inline-flex items-center justify-center"
           >
             <span className="sr-only">Open mobile menu</span>
-            <Bars3Icon
-              aria-hidden="true"
-              className="size-12 mobile-hamburger mt-5"
-            />
+            <Bars3Icon aria-hidden="true" className="size-8 mobile-hamburger" />
           </button>
         </div>
 

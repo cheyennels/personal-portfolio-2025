@@ -14,15 +14,15 @@ export default function RootLayout({
       <body className={`${schibsted.className} antialiased`}>
         <Header />
         <div className="layout-container">
-          <main className="h-full pt-10">{children}</main>
+          <main className="">{children}</main>
           <footer>
             <div className="align-center justify-center">
               <Image
                 aria-hidden
                 src={treeFooter}
                 alt="Forest art"
-                width={8000}
-                height={913}
+                width={1000}
+                height={300}
               />
             </div>
           </footer>
