@@ -4,6 +4,7 @@ import { useState, memo } from 'react'
 import { Dialog, DialogPanel, TransitionChild } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Link from 'next/link'
 import logo from '../../../public/assets/logo-w.png'
 
 const NewHeader = memo(function Header() {
@@ -39,19 +40,19 @@ const NewHeader = memo(function Header() {
           />
 
           <div className="flex flex-row gap-12">
-            <a href="/" className="nav-link">
+            <Link href="/" className="nav-link">
               Home
-            </a>
-            <a href="/resume" className="nav-link">
+            </Link>
+            <Link href="/resume" className="nav-link">
               Resume
-            </a>
+            </Link>
 
-            <a href="/design" className="nav-link">
+            <Link href="/design" className="nav-link">
               Design
-            </a>
-            <a href="/dev" className="nav-link">
+            </Link>
+            <Link href="/dev" className="nav-link">
               Dev Work
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -85,34 +86,38 @@ const NewHeader = memo(function Header() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y ">
                 <div className="space-y-2 py-6">
-                  <a
+                  <Link
                     href="/"
                     className="-mx-3 nav-link block px-3 py-2"
                     aria-label="Link to home"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/resume"
                     className="-mx-3 nav-link block px-3 py-2"
                     aria-label="Link to resume and contact"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Resume
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/design"
                     className="-mx-3 nav-link block px-3 py-2"
                     aria-label="Link to design work"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Design
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/dev"
                     className="-mx-3 nav-link block px-3 py-2"
                     aria-label="Link to dev work"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Dev Work
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

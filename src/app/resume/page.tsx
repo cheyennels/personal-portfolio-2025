@@ -13,7 +13,7 @@ export default function Resume() {
           })}
         </div>
         <h1 className="text-large">
-          This page is currently under construction!🏗️ ❤️
+          This page is currently under construction
         </h1>
       </main>
     </div>
