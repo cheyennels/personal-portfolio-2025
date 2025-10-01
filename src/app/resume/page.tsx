@@ -2,7 +2,7 @@ export default function Resume() {
   return (
     <div className="items-center justify-items-center p-8 gap-16">
       <main className="flex flex-col items-center">
-        <div className=" p-2 footer-date">
+        <div className="footer-date">
           Last updated:{' '}
           {new Date().toLocaleDateString('en-US', {
             year: 'numeric',
