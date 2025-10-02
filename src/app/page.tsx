@@ -11,7 +11,6 @@ import { useScrollAnimation } from './hooks/useScrollAnimation'
 export default function Home() {
   const arrowRef = useRef<HTMLDivElement>(null)
   const heroRef = useScrollAnimation(0.1, '0px 0px -100px 0px')
-  const arrowContainerRef = useScrollAnimation(0.1, '0px 0px -50px 0px')
   const sectionRef = useScrollAnimation(0.1, '0px 0px -100px 0px')
 
   useEffect(() => {
@@ -80,10 +79,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div
-        ref={arrowContainerRef as React.RefObject<HTMLDivElement>}
-        className="arrow-container scroll-animate-delay"
-      >
+      <div ref={arrowRef} className="arrow-container">
         <FaArrowDown
           className="bounce scroll-icon"
           onClick={scrollToSection}
