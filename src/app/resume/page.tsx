@@ -1,3 +1,8 @@
+import type { Metadata } from 'next'
+import { resumeMetadata } from '../metadata'
+
+export const metadata: Metadata = resumeMetadata
+
 export default function Resume() {
   return (
     <div className="items-center justify-items-center p-8 gap-16">

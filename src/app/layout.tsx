@@ -1,10 +1,22 @@
-'use client'
-
 import { schibsted } from './ui/fonts'
 import './globals.css'
 import Image from 'next/image'
 import treeFooter from '../../public/assets/tree-footer-w.png'
 import Header from './components/Header'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Cheyenne Smith - Designer & Developer',
+  description:
+    'Portfolio of Cheyenne Smith - Designer, Developer, and Creator specializing in user experience design and development.',
+  keywords: 'designer, developer, portfolio, ux, ui, web design',
+  openGraph: {
+    title: 'Cheyenne Smith - Designer & Developer',
+    description:
+      'Portfolio of Cheyenne Smith - Designer, Developer, and Creator.',
+    type: 'website',
+  },
+}
 
 export default function RootLayout({
   children,

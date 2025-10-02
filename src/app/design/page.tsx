@@ -1,3 +1,8 @@
+import type { Metadata } from 'next'
+import { designMetadata } from '../metadata'
+
+export const metadata: Metadata = designMetadata
+
 export default function Design() {
   return (
     <div className="items-center justify-items-center p-8 gap-16">
