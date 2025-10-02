@@ -25,9 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${schibsted.className} antialiased`}>
+      <body
+        className={`${schibsted.className} antialiased min-h-screen flex flex-col`}
+      >
         <Header />
-        <main className="layout-container">{children}</main>
+        <main className="flex-1 overflow-hidden pt-20 lg:pt-0">{children}</main>
         <footer>
           <div className="footer-image-container">
             <Image

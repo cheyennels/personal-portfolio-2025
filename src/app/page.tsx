@@ -33,67 +33,73 @@ export default function Home() {
     }
   }
   return (
-    <div className="home-container">
-      <div
-        ref={heroRef as React.RefObject<HTMLDivElement>}
-        className="hero-section scroll-animate"
-      >
-        <div>
-          <h1 className="text-hero w-full">Cheyenne Smith</h1>
-          <h2 className="text-title">I design. I code. I create.</h2>
-          <p className="body-hero">
-            Turning ideas into beautiful experiences people enjoy.
-          </p>
-          <div className="hero-icons">
-            <a
-              href="https://github.com/cheyennels"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit my GitHub profile"
+    <>
+      <div className="min-h-screen px-4 py-20">
+        <div className="grid grid-rows-[1fr_auto] justify-items-center gap-10 min-h-full">
+          <div className="max-w-[900px] w-full grid place-items-center lg:px-0 px-4">
+            <div
+              ref={heroRef as React.RefObject<HTMLDivElement>}
+              className="grid lg:grid-cols-2 items-center lg:gap-20 gap-10 scroll-animate"
             >
-              <FaGithub className="icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/cheyenne-smith-4309a2194/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit my LinkedIn profile"
-            >
-              <FaLinkedin className="icon" />
-            </a>
+              <div>
+                <h1 className="text-hero w-full">Cheyenne Smith</h1>
+                <h2 className="text-title">I design. I code. I create.</h2>
+                <p className="body-hero">
+                  Turning ideas into beautiful experiences people enjoy.
+                </p>
+                <div className="hero-icons">
+                  <a
+                    href="https://github.com/cheyennels"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit my GitHub profile"
+                  >
+                    <FaGithub className="icon" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/cheyenne-smith-4309a2194/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit my LinkedIn profile"
+                  >
+                    <FaLinkedin className="icon" />
+                  </a>
+                </div>
+              </div>
+              <Image
+                src={portrait}
+                alt="A picture of Cheyenne"
+                width={400}
+                height={400}
+                className="hidden lg:block"
+              />
+              <div className="mask-square block lg:hidden">
+                <Image
+                  src={portrait}
+                  alt="A picture of Cheyenne"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </div>
+          </div>
+          <div ref={arrowRef} className="arrow-container">
+            <FaArrowDown
+              className="bounce scroll-icon"
+              onClick={scrollToSection}
+              style={{ cursor: 'pointer' }}
+              tabIndex={0}
+              role="button"
+              aria-label="Skip to main content"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  scrollToSection()
+                }
+              }}
+            />
           </div>
         </div>
-        <Image
-          src={portrait}
-          alt="A picture of Cheyenne"
-          width={400}
-          height={400}
-          className="hidden lg:block"
-        />
-        <div className="mask-square block lg:hidden">
-          <Image
-            src={portrait}
-            alt="A picture of Cheyenne"
-            width={400}
-            height={400}
-          />
-        </div>
-      </div>
-      <div ref={arrowRef} className="arrow-container">
-        <FaArrowDown
-          className="bounce scroll-icon"
-          onClick={scrollToSection}
-          style={{ cursor: 'pointer' }}
-          tabIndex={0}
-          role="button"
-          aria-label="Skip to main content"
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              scrollToSection()
-            }
-          }}
-        />
       </div>
       <div
         ref={sectionRef as React.RefObject<HTMLDivElement>}
@@ -111,17 +117,17 @@ export default function Home() {
           <div className="flex flex-col gap-4 lg:max-w-[60%]">
             <h3 className="section-title">What am I currently working on?</h3>
             <p className="section-body">
-              I’m currently designing a mobile app called Puppy Pedometer,
+              I'm currently designing a mobile app called Puppy Pedometer,
               created to encourage users to get outside and stay active. Drawing
               inspiration from apps like Pikmin Bloom, Finch, and Pokémon Go,
               the app transforms daily steps into growth for a virtual puppy
-              while unlocking accessories for customization. I’m in the process
+              while unlocking accessories for customization. I'm in the process
               of wireframing and developing pixel art, with the goal of creating
               a cozy, peaceful, and playful aesthetic.{' '}
             </p>
           </div>
         </Section>
       </div>
-    </div>
+    </>
   )
 }

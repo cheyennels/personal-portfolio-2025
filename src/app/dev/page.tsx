@@ -10,15 +10,15 @@ export const metadata: Metadata = devMetadata
 
 export default function Dev() {
   return (
-    <div className="items-center justify-items-center p-8 gap-16">
-      <main className="flex flex-col">
+    <div className="h-full flex flex-col items-center p-8">
+      <div className="max-w-[900px] w-full flex flex-col items-center gap-8">
         <Suspense fallback={<SkeletonCard />}>
           <GitHubContributions />
         </Suspense>
         <Suspense fallback={<SkeletonCard />}>
           <GitHubStats />
         </Suspense>
-      </main>
+      </div>
     </div>
   )
 }

@@ -5,8 +5,8 @@ export const metadata: Metadata = resumeMetadata
 
 export default function Resume() {
   return (
-    <div className="items-center justify-items-center p-8 gap-16">
-      <main className="flex flex-col items-center">
+    <div className="h-full grid place-content-center p-8 gap-16">
+      <div className="flex flex-col items-center gap-8">
         <div className="footer-date">
           Last updated:{' '}
           {new Date().toLocaleDateString('en-US', {
@@ -20,7 +20,7 @@ export default function Resume() {
         <h1 className="text-large">
           This page is currently under construction
         </h1>
-      </main>
+      </div>
     </div>
   )
 }
