@@ -44,7 +44,7 @@ export default function Home() {
           <p className="body-hero">
             Turning ideas into beautiful experiences people enjoy.
           </p>
-          <div className="hero-content">
+          <div className="hero-icons">
             <a
               href="https://github.com/cheyennels"
               target="_blank"
