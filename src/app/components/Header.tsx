@@ -11,8 +11,11 @@ const NewHeader = memo(function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="w-screen">
-      <nav aria-label="Global" className="header-container">
+    <header className="fixed inset-x-0 top-0 lg:relative lg:static z-50">
+      <nav
+        aria-label="Global"
+        className="header-container bg-[var(--background)] lg:bg-transparent"
+      >
         <div className="flex w-full px-10 items-center lg:hidden justify-between">
           {/* mobile logo */}
           <Image
