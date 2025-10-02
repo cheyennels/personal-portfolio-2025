@@ -84,6 +84,15 @@ export default function Home() {
           className="bounce scroll-icon"
           onClick={scrollToSection}
           style={{ cursor: 'pointer' }}
+          tabIndex={0}
+          role="button"
+          aria-label="Skip to main content"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              scrollToSection()
+            }
+          }}
         />
       </div>
       <div
