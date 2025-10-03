@@ -105,28 +105,23 @@ export default function Home() {
         ref={sectionRef as React.RefObject<HTMLDivElement>}
         className="scroll-animate"
       >
-        <Section>
-          <div className="section-image-container">
-            <Image
-              src={puppies}
-              alt="Puppy Pedometer app pixel art illustration"
-              fill
-              className="section-image"
-            />
-          </div>
-          <div className="flex flex-col gap-4 lg:max-w-[60%]">
-            <h3 className="section-title">What am I currently working on?</h3>
-            <p className="section-body">
-              I'm currently designing a mobile app called Puppy Pedometer,
-              created to encourage users to get outside and stay active. Drawing
-              inspiration from apps like Pikmin Bloom, Finch, and Pokémon Go,
-              the app transforms daily steps into growth for a virtual puppy
-              while unlocking accessories for customization. I'm in the process
-              of wireframing and developing pixel art, with the goal of creating
-              a cozy, peaceful, and playful aesthetic.{' '}
-            </p>
-          </div>
-        </Section>
+        <Section
+          title="What am I currently working on?"
+          body={`I'm currently designing a mobile app called Puppy Pedometer, created to encourage users to get outside and stay active.
+
+Drawing inspiration from apps like Pikmin Bloom, Finch, and Pokémon Go, the app transforms daily steps into growth for a virtual puppy while unlocking accessories for customization.
+
+I'm in the process of wireframing and developing pixel art, with the goal of creating a cozy, peaceful, and playful aesthetic.`}
+          image={{
+            src: puppies,
+            alt: 'Puppy Pedometer app pixel art illustration',
+          }}
+          link={{
+            href: '#',
+            text: 'Learn more about this project',
+            target: '_self',
+          }}
+        />
       </div>
     </>
   )
