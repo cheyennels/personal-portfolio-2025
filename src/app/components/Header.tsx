@@ -16,7 +16,7 @@ const NewHeader = memo(function Header() {
         aria-label="Global"
         className="header-container bg-[var(--background)] lg:bg-transparent"
       >
-        <div className="flex w-full px-10 items-center lg:hidden justify-between">
+        <div className="flex w-full lg:px-10 md:px-10 px-4 items-center lg:hidden justify-between">
           {/* mobile logo */}
           <Image
             src={logo}
