@@ -1,5 +1,5 @@
 .blog-page-wrapper {
-  background-color: white !important;
+  background-color: var(--foreground) !important;
   min-height: 100vh;
 }
 

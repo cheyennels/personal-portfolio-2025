@@ -100,4 +100,30 @@
   .blog-banner {
     height: 200px;
   }
+
+  /* Resume responsive styles */
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .experience-date {
+    font-size: 0.9rem;
+  }
+
+  .resume-link {
+    align-self: flex-start;
+  }
 }

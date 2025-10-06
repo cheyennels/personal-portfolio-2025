@@ -35,7 +35,9 @@ export default function RootLayout({
         className={`${schibsted.className} antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="flex-1 overflow-hidden pt-20 lg:pt-0">{children}</main>
+        <main className="flex-1 overflow-hidden pt-[60px] lg:pt-0">
+          {children}
+        </main>
         <footer>
           <div className="footer-image-container">
             <Image
