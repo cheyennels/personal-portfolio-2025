@@ -1,0 +1,137 @@
+/* ==================== Typography ==================== */
+.text-hero {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.text-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--foreground);
+}
+
+.text-large {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--foreground);
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--grey-700);
+}
+
+.body-hero {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--foreground);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--background);
+}
+
+.section-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--grey-600);
+}
+
+/* ==================== Navigation Typography ==================== */
+.nav-link {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  /* increased nav-link size so buttons are easier to click */
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--background);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section-link:hover {
+  color: var(--primary);
+}
+
+/* ==================== Blog Typography ==================== */
+.blog-section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--grey-800);
+}
+
+.blog-date {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--grey-500);
+}
+
+.blog-section-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--grey-600);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.blog-section-body p {
+  margin-bottom: 1rem;
+}
+
+.blog-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== Mobile Navigation Typography ==================== */
+.mobile-hamburger {
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.mobile-hamburger:hover {
+  color: var(--primary);
+}
+
+.mobile-x-mark {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+}
+
+.mobile-x-mark:hover {
+  color: var(--primary);
+}

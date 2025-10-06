@@ -39,7 +39,7 @@ export default function CurrentProject() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-white">
+    <div className="blog-page-wrapper">
       <div className="blog-container w-full h-full grid place-content-center p-8 gap-16">
         <div className="blog-wrapper">
           <div className="blog-header">

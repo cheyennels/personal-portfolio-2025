@@ -1,0 +1,38 @@
+/* ==================== Home Page Layout ==================== */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section {
+  animation: fadeIn 0.8s ease-out forwards;
+  /* Layout handled by Tailwind utilities in components */
+}
+
+.hero-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 1.25rem;
+}
+
+.arrow-container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

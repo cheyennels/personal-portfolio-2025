@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+/* ==================== Global Reset ==================== */
+* {
+  background-color: inherit;
+}
+
+html {
+  background-color: #111419;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ==================== CSS Variables ==================== */
+:root {
+  --background: #111419;
+  --foreground: #f8f8ff;
+  --primary: #dc2626;
+  --secondary: #d6dbdb;
+
+  /* Grayscale palette */
+  --grey-900: #121212; /* your black */
+  --grey-800: #2a2a2a;
+  --grey-700: #444444;
+  --grey-600: #666666;
+  --grey-500: #8c8c8c;
+  --grey-400: #b3b3ad;
+  --grey-300: #d1d1cc;
+  --grey-200: #e8e8e4;
+  --grey-100: #f8f8f2; /* your white */
+
+  /* Custom font styles */
+  --font-display: 'Schibsted Grotesk', sans-serif;
+  --font-body: 'Schibsted Grotesk', sans-serif;
+  --font-mono: 'Courier New', monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ==================== Layout ==================== */
+/* 
+ * Flexbox layout structure:
+ * body (flex flex-col min-h-screen)
+ *   ├── Header (auto height)
+ *   ├── main (flex-1 - grows to fill space)
+ *   └──-footer (auto height)
+ * 
+ * Layout styling handled by Tailwind Flexbox utilities
+ */
