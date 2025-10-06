@@ -45,7 +45,7 @@ const Section = ({
         <a
           href={link.href}
           target={link.target || '_blank'}
-          className="inline-flex items-center gap-2 text-lg font-medium text-[var(--background)] hover:text-[var(--primary)] transition-colors duration-300 group"
+          className="section-link group"
         >
           {link.text}
           <FaArrowRight
