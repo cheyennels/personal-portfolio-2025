@@ -22,3 +22,9 @@ export const devMetadata: Metadata = {
   description:
     "View Cheyenne Smith's web development projects and technical work.",
 }
+
+export const contactMetadata: Metadata = {
+  title: 'Contact - Cheyenne Smith',
+  description:
+    'Get in touch with Cheyenne Smith for design and development opportunities. Currently seeking full-time positions in UX/UI design and development.',
+}

@@ -9,7 +9,9 @@ import './styles/responsive.css'
 import Image from 'next/image'
 import treeFooter from '../../public/assets/tree-footer-w.png'
 import Header from './components/Header'
+import Button from './components/Button'
 import type { Metadata } from 'next'
+import { FaGithub, FaLinkedin, FaArrowRight } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Cheyenne Smith - Designer & Developer',
@@ -34,11 +36,45 @@ export default function RootLayout({
       <body
         className={`${schibsted.className} antialiased min-h-screen flex flex-col`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Header />
-        <main className="flex-1 overflow-hidden pt-[60px] lg:pt-0">
+        <main
+          id="main-content"
+          className="flex-1 overflow-hidden pt-[60px] lg:pt-[100px]"
+        >
           {children}
         </main>
         <footer>
+          <div className="footer-content">
+            <div className="contact-info">
+              <a href="/contact" className="footer-link group">
+                Let's Connect
+                <FaArrowRight />
+              </a>
+              <div className="contact-links">
+                <p>cheyenneleesmith@gmail.com</p>
+
+                <a
+                  href="https://github.com/cheyennels"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit my GitHub profile"
+                >
+                  <FaGithub className="icon" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/cheyenne-smith-4309a2194/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit my LinkedIn profile"
+                >
+                  <FaLinkedin className="icon" />
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="footer-image-container">
             <Image
               aria-hidden
