@@ -38,14 +38,15 @@ export default function Contact() {
     e.preventDefault()
     setStatus('loading')
 
-    // Simulate form submission - replace with actual API endpoint
+    // Form submission - configure your endpoint in production
     try {
-      // TODO: Add your form submission logic here
+      // For now, this simulates a successful submission
+      // Replace with your actual form handling (e.g., email service, API endpoint)
       await new Promise((resolve) => setTimeout(resolve, 1000))
       setStatus('success')
       setFormData({ name: '', email: '', message: '' })
       setTimeout(() => setStatus('idle'), 3000)
-    } catch (error) {
+    } catch {
       setStatus('error')
       setTimeout(() => setStatus('idle'), 3000)
     }
@@ -56,7 +57,7 @@ export default function Contact() {
       <div className="page-container w-full h-full">
         <div className="page-wrapper">
           <div className="page-header">
-            <h1>Let's Connect</h1>
+            <h1>Let&apos;s Connect</h1>
           </div>
           <Divider />
           <div className="contact-page-content">
@@ -96,10 +97,11 @@ export default function Contact() {
                   </div>
                 </div>
                 <p className="contact-intro">
-                  I'm always interested in new opportunities, collaborations,
-                  and conversations about design and development. I'm currently
-                  looking for a full time position in design, UX/UI, or
-                  development. Feel free to reach out!
+                  I&apos;m always interested in new opportunities,
+                  collaborations, and conversations about design and
+                  development. I&apos;m currently looking for a full time
+                  position in design, UX/UI, or development. Feel free to reach
+                  out!
                 </p>
               </div>
 
@@ -157,7 +159,7 @@ export default function Contact() {
 
                 {status === 'success' && (
                   <p className="form-message success">
-                    Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I&apos;ll get back to you soon.
                   </p>
                 )}
                 {status === 'error' && (
