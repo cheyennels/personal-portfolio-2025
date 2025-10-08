@@ -95,6 +95,7 @@
   z-index: 10;
   position: absolute;
   background-color: transparent;
+  cursor: pointer;
 }
 
 /* ==================== Mobile Navigation ==================== */
