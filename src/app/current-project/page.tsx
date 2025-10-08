@@ -40,11 +40,11 @@ export default function CurrentProject() {
 
   return (
     <div className="blog-page-wrapper">
-      <div className="blog-container w-full h-full grid place-content-center p-8 gap-16">
+      <div className="blog-container w-full h-full grid place-content-center gap-16">
         <div className="blog-wrapper">
           <div className="blog-header">
             <h1>Current Project - Puppy Pedometer</h1>
-            <p className="blog-date">October 2025</p>
+            <p className="blog-date">Last Updated: October 2025</p>
             <div className="blog-banner">
               <Image src={banner} alt="Banner" fill />
             </div>

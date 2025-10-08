@@ -1,25 +1,23 @@
 import type { Metadata } from 'next'
 import { resumeMetadata } from '../metadata'
+import Button from '../components/Button'
+import Divider from '../components/Divider'
 
 export const metadata: Metadata = resumeMetadata
 
 export default function Resume() {
   return (
     <div className="whole-page-wrapper">
-      <div className="page-container w-full h-full p-8">
+      <div className="page-container w-full h-full">
         <div className="page-wrapper">
           <div className="page-header">
             <h1>Resume</h1>
-            <a
-              href="/assets/cheyenne-resume.pdf"
-              target="_blank"
-              className="resume-link"
-            >
+            <Button href="/assets/cheyenne-resume.pdf" external>
               Download Resume
-            </a>
+            </Button>
           </div>
 
-          <hr className="resume-divider" />
+          <Divider />
 
           <div className="resume-content">
             {/* Skills Section */}
@@ -52,7 +50,7 @@ export default function Resume() {
               </div>
             </div>
 
-            <hr className="resume-divider" />
+            <Divider />
 
             {/* Professional Experience */}
             <div className="resume-section">
@@ -122,7 +120,7 @@ export default function Resume() {
                 </ul>
               </div>
             </div>
-            <hr className="resume-divider" />
+            <Divider />
 
             {/* Education */}
             <div className="resume-section">
@@ -160,7 +158,6 @@ export default function Resume() {
                 </div>
               </div>
             </div>
-            <hr className="resume-divider" />
           </div>
         </div>
       </div>

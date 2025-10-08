@@ -48,10 +48,7 @@ const Section = ({
           className="section-link group"
         >
           {link.text}
-          <FaArrowRight
-            className="text-xl group-hover:translate-x-1 transition-transform duration-200"
-            style={{ color: 'var(--primary)' }}
-          />
+          <FaArrowRight className="text-xl group-hover:translate-x-1 transition-transform duration-200" />
         </a>
       )}
     </div>

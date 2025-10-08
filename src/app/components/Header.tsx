@@ -11,10 +11,10 @@ const NewHeader = memo(function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 lg:relative lg:static z-50">
+    <header className="fixed inset-x-0 top-0 z-50">
       <nav
         aria-label="Global"
-        className="header-container bg-[var(--background)] lg:bg-transparent"
+        className="header-container bg-[var(--background)]"
       >
         <div className="flex w-full lg:px-10 md:px-10 px-4 items-center lg:hidden justify-between">
           {/* mobile logo */}
@@ -46,15 +46,17 @@ const NewHeader = memo(function Header() {
             <Link href="/" className="nav-link">
               Home
             </Link>
-            <Link href="/resume" className="nav-link">
-              Resume
-            </Link>
-
             <Link href="/design" className="nav-link">
               Design
             </Link>
             <Link href="/dev" className="nav-link">
-              Dev Work
+              Development
+            </Link>
+            <Link href="/contact" className="nav-link">
+              Contact
+            </Link>
+            <Link href="/resume" className="nav-link">
+              Resume
             </Link>
           </div>
         </div>
@@ -97,14 +99,7 @@ const NewHeader = memo(function Header() {
                   >
                     Home
                   </Link>
-                  <Link
-                    href="/resume"
-                    className="-mx-3 nav-link block px-3 py-2"
-                    aria-label="Link to resume and contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Resume
-                  </Link>
+
                   <Link
                     href="/design"
                     className="-mx-3 nav-link block px-3 py-2"
@@ -119,7 +114,23 @@ const NewHeader = memo(function Header() {
                     aria-label="Link to dev work"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Dev Work
+                    Development
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="-mx-3 nav-link block px-3 py-2"
+                    aria-label="Link to contact"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                  <Link
+                    href="/resume"
+                    className="-mx-3 nav-link block px-3 py-2"
+                    aria-label="Link to resume"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Resume
                   </Link>
                 </div>
               </div>

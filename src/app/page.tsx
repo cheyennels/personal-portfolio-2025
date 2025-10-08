@@ -87,7 +87,6 @@ export default function Home() {
             <FaArrowDown
               className="bounce scroll-icon"
               onClick={scrollToSection}
-              style={{ cursor: 'pointer' }}
               tabIndex={0}
               role="button"
               aria-label="Skip to main content"
