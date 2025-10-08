@@ -38,14 +38,23 @@ export default function Contact() {
     e.preventDefault()
     setStatus('loading')
 
-    // Form submission - configure your endpoint in production
     try {
-      // For now, this simulates a successful submission
-      // Replace with your actual form handling (e.g., email service, API endpoint)
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setStatus('success')
-      setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setStatus('idle'), 3000)
+      const response = await fetch('https://formspree.io/f/xpwyjbrr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus('idle'), 3000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 3000)
+      }
     } catch {
       setStatus('error')
       setTimeout(() => setStatus('idle'), 3000)
