@@ -47,7 +47,7 @@
 .page-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .page-wrapper {
@@ -124,20 +124,41 @@
   margin: 0;
 }
 
-.resume-link {
+/* ==================== Button Component Styles ==================== */
+
+.button-link {
   font-family: var(--font-body);
   font-size: 1rem;
-  color: var(--grey-900);
   font-weight: 500;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 2px solid var(--grey-900);
+  border: 2px solid;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.resume-link:hover {
+.button-primary {
+  color: var(--grey-900);
+  border-color: var(--grey-900);
+  background-color: transparent;
+}
+
+.button-primary:hover {
   background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.button-secondary {
   color: var(--foreground);
+  border-color: var(--foreground);
+  background-color: transparent;
+}
+
+.button-secondary:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
 }
 
 /* Experience Section */
@@ -254,4 +275,216 @@
   color: var(--grey-500);
   position: absolute;
   left: 0;
+}
+
+/* ==================== Footer Styles ==================== */
+
+.footer-content {
+  background-color: var(--background);
+  padding: 2rem 0;
+  border-top: 1px solid var(--grey-300);
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-info h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary);
+}
+
+.footer-link svg {
+  color: var(--foreground);
+  transition: transform 0.2s ease;
+}
+
+.footer-link:hover svg {
+  transform: translateX(4px);
+}
+
+.icon:hover {
+  color: var(--primary);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ==================== Contact Page Styles ==================== */
+
+.contact-page-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-intro {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--grey-700);
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  padding-right: 2.5rem;
+}
+
+.contact-methods h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--grey-900);
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.contact-method-details h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--grey-900);
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-method-details a {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--grey-700);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-method-details a:hover {
+  color: var(--primary);
+}
+
+/* ==================== Contact Form Styles ==================== */
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--grey-900);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--grey-900);
+  background-color: var(--foreground);
+  border: 2px solid var(--background);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: var(--background);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }

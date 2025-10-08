@@ -39,10 +39,50 @@
   .nav-link {
     align-items: start;
     justify-content: start;
+    width: 100%;
   }
 
   .blog-banner {
     height: 300px;
+  }
+
+  .blog-container {
+    padding: 2rem;
+  }
+
+  .page-container {
+    padding: 2rem;
+  }
+
+  .contact-intro {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Footer responsive styles */
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+
+  .contact-links {
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .contact-links p {
+    margin: 0;
+  }
+
+  .footer-link {
+    font-size: 1rem;
   }
 }
 
@@ -123,7 +163,8 @@
     font-size: 0.9rem;
   }
 
-  .resume-link {
-    align-self: flex-start;
+  .button-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }

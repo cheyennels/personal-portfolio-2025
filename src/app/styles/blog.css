@@ -6,7 +6,7 @@
 .blog-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .blog-wrapper {
@@ -33,6 +33,11 @@
   margin-bottom: 3rem;
 }
 
+.blog-section .section-link {
+  display: inline-flex;
+  margin-bottom: 1.5rem;
+}
+
 .blog-banner {
   position: relative;
   width: 100%;
@@ -40,4 +45,18 @@
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 2rem;
+}
+
+.blog-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.blog-section-date {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--grey-600);
 }
