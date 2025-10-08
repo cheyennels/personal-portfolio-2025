@@ -312,19 +312,31 @@ export default function Design() {
                 className="blog-image-square"
                 onClick={() => openModal(mcc2.src, 'MCTC campaign flyer')}
               >
-                <ImageWithSkeleton src={mcc2} alt="MCTC campaign flyer design" fill />
+                <ImageWithSkeleton
+                  src={mcc2}
+                  alt="MCTC campaign flyer design"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(mcc3.src, 'MCTC branding materials')}
               >
-                <ImageWithSkeleton src={mcc3} alt="MCTC branding materials design" fill />
+                <ImageWithSkeleton
+                  src={mcc3}
+                  alt="MCTC branding materials design"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(mcc4.src, 'MCTC digital graphics')}
               >
-                <ImageWithSkeleton src={mcc4} alt="MCTC digital graphics design" fill />
+                <ImageWithSkeleton
+                  src={mcc4}
+                  alt="MCTC digital graphics design"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
@@ -342,7 +354,11 @@ export default function Design() {
                 className="blog-image-square"
                 onClick={() => openModal(mcc6.src, 'MCTC event marketing')}
               >
-                <ImageWithSkeleton src={mcc6} alt="MCTC event marketing design" fill />
+                <ImageWithSkeleton
+                  src={mcc6}
+                  alt="MCTC event marketing design"
+                  fill
+                />
               </div>
             </div>
           </div>
@@ -415,13 +431,21 @@ export default function Design() {
               >
                 {/* Images to show here:
               inspiration board, notes/mindmap, or moodboard. */}
-                <ImageWithSkeleton src={quest1} alt="Quest 4 Excellence 1" fill />
+                <ImageWithSkeleton
+                  src={quest1}
+                  alt="Quest 4 Excellence 1"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(quest2.src, 'Quest 4 Excellence 2')}
               >
-                <ImageWithSkeleton src={quest2} alt="Quest 4 Excellence 2" fill />
+                <ImageWithSkeleton
+                  src={quest2}
+                  alt="Quest 4 Excellence 2"
+                  fill
+                />
               </div>
             </div>
           </div>

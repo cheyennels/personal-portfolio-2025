@@ -91,19 +91,31 @@ export default function CurrentProject() {
                 className="blog-image-square"
                 onClick={() => openModal(discovery1.src, 'Discovery process 1')}
               >
-                <ImageWithSkeleton src={discovery1} alt="Discovery process 1" fill />
+                <ImageWithSkeleton
+                  src={discovery1}
+                  alt="Discovery process 1"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(discovery2.src, 'Discovery process 2')}
               >
-                <ImageWithSkeleton src={discovery2} alt="Discovery process 2" fill />
+                <ImageWithSkeleton
+                  src={discovery2}
+                  alt="Discovery process 2"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(discovery3.src, 'Discovery process 3')}
               >
-                <ImageWithSkeleton src={discovery3} alt="Discovery process 3" fill />
+                <ImageWithSkeleton
+                  src={discovery3}
+                  alt="Discovery process 3"
+                  fill
+                />
               </div>
             </div>
           </div>
@@ -126,13 +138,21 @@ export default function CurrentProject() {
                 {/*  Images to show here: A few wireframes of key
               screens (home, progress, puppy view). Optional: quick user flow
               diagram. */}
-                <ImageWithSkeleton src={wireframes} alt="Home screen wireframe" fill />
+                <ImageWithSkeleton
+                  src={wireframes}
+                  alt="Home screen wireframe"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(wf2.src, 'Progress screen wireframe')}
               >
-                <ImageWithSkeleton src={wf2} alt="Progress screen wireframe" fill />
+                <ImageWithSkeleton
+                  src={wf2}
+                  alt="Progress screen wireframe"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
@@ -177,7 +197,11 @@ export default function CurrentProject() {
                 className="blog-image-square"
                 onClick={() => openModal(dashboard.src, 'Dashboard screen')}
               >
-                <ImageWithSkeleton src={dashboard} alt="Dashboard screen" fill />
+                <ImageWithSkeleton
+                  src={dashboard}
+                  alt="Dashboard screen"
+                  fill
+                />
               </div>
               <div
                 className="blog-image-square"
@@ -213,7 +237,11 @@ export default function CurrentProject() {
                   openModal(components.src, 'Figma components library')
                 }
               >
-                <ImageWithSkeleton src={components} alt="Figma components library" fill />
+                <ImageWithSkeleton
+                  src={components}
+                  alt="Figma components library"
+                  fill
+                />
               </div>
             </div>
           </div>
@@ -235,7 +263,11 @@ export default function CurrentProject() {
                   openModal(loficomponents.src, 'Low-fi components')
                 }
               >
-                <ImageWithSkeleton src={loficomponents} alt="Low-fi components" fill />
+                <ImageWithSkeleton
+                  src={loficomponents}
+                  alt="Low-fi components"
+                  fill
+                />
                 {/*  Images to show here: placeholder
               "coming soon" mockup or pixel art sneak peek. */}
               </div>
@@ -243,7 +275,11 @@ export default function CurrentProject() {
                 className="blog-image-square"
                 onClick={() => openModal(pixelArt.src, 'Pixel art sneak peek')}
               >
-                <ImageWithSkeleton src={pixelArt} alt="Pixel art sneak peek" fill />
+                <ImageWithSkeleton
+                  src={pixelArt}
+                  alt="Pixel art sneak peek"
+                  fill
+                />
               </div>
             </div>
           </div>
