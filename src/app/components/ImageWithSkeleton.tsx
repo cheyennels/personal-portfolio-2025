@@ -24,11 +24,16 @@ export default function ImageWithSkeleton({
 }: ImageWithSkeletonProps) {
   const [isLoading, setIsLoading] = useState(true)
 
+  // For fill images, wrapper needs to be relative and take full space
+  const wrapperClass = fill 
+    ? `relative w-full h-full ${className}`
+    : className
+
   return (
-    <div className={`relative ${className}`} onClick={onClick}>
+    <>
       {/* Skeleton loader */}
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-md" />
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-md z-10" />
       )}
       
       {/* Actual image */}
@@ -38,13 +43,14 @@ export default function ImageWithSkeleton({
         fill={fill}
         width={width}
         height={height}
-        className={`transition-opacity duration-300 ${
+        className={`${wrapperClass} transition-opacity duration-300 ${
           isLoading ? 'opacity-0' : 'opacity-100'
         } ${fill ? 'object-cover' : ''}`}
         onLoad={() => setIsLoading(false)}
         priority={priority}
+        onClick={onClick}
       />
-    </div>
+    </>
   )
 }
 
