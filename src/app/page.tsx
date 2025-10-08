@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import puppies from '../../public/assets/illustration/pixel-art.png'
-import portrait from '../../public/assets/illustration/me-2.jpg'
+import portrait from '../../public/assets/illustration/portrait.jpg'
 import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa'
 import Section from './components/Section'
 import { useEffect, useRef } from 'react'
