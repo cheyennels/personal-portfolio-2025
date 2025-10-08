@@ -34,8 +34,8 @@ export default function Home() {
   }
   return (
     <>
-      <div className="min-h-screen px-4 py-20">
-        <div className="grid grid-rows-[1fr_auto] justify-items-center gap-10 min-h-full">
+      <div className="h-[calc(100vh-60px)] lg:h-[calc(100vh-100px)] px-4 py-20 flex flex-col">
+        <div className="grid grid-rows-[1fr_auto] justify-items-center gap-10 flex-1">
           <div className="max-w-[900px] w-full grid place-items-center lg:px-0 px-4">
             <div
               ref={heroRef as React.RefObject<HTMLDivElement>}
