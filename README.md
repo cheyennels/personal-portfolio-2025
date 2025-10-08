@@ -183,3 +183,4 @@ MIT License - feel free to use this as a template for your own portfolio!
 ---
 
 **Note**: This is a personal portfolio project. The contact form currently uses a simulated submission. For production, integrate with your preferred email service or form backend.
+# Force rebuild
