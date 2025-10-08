@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description:
     'Portfolio of Cheyenne Smith - Designer, Developer, and Creator specializing in user experience design and development.',
   keywords: 'designer, developer, portfolio, ux, ui, web design',
+  verification: {
+    google: 'YOUR_VERIFICATION_CODE_HERE', // Replace with actual code from Google
+  },
   openGraph: {
     title: 'Cheyenne Smith - Designer & Developer',
     description:
