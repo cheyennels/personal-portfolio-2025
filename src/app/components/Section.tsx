@@ -1,11 +1,11 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { FaArrowRight } from 'react-icons/fa'
 
 interface SectionProps {
   title: string
   body: string | React.ReactNode
   image: {
-    src: any
+    src: StaticImageData | string
     alt: string
   }
   link?: {

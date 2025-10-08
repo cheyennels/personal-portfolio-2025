@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import placeholder from '../../../public/assets/illustration/p-1.png'
 import ImageModal from '../components/ImageModal'
 
 import discovery1 from '../../../public/assets/puppy-app/discovery1.png'
@@ -52,12 +51,12 @@ export default function CurrentProject() {
           <div className="blog-section">
             <h2 className="blog-section-title">Project Overview</h2>
             <p className="blog-section-body">
-              I'm currently working on a mobile app called Puppy Pedometer. The
-              goal is to make daily activity more fun and motivating by turning
-              steps into a way to grow and customize a virtual puppy. Inspired
-              by cozy and playful apps like Pikmin Bloom, Finch, and Pokémon Go,
-              Puppy Pedometer encourages people to get outside and move while
-              taking care of something cute! (think Tamagotchi 👾)
+              I&apos;m currently working on a mobile app called Puppy Pedometer.
+              The goal is to make daily activity more fun and motivating by
+              turning steps into a way to grow and customize a virtual puppy.
+              Inspired by cozy and playful apps like Pikmin Bloom, Finch, and
+              Pokémon Go, Puppy Pedometer encourages people to get outside and
+              move while taking care of something cute! (think Tamagotchi 👾)
             </p>
           </div>
 
@@ -220,14 +219,14 @@ export default function CurrentProject() {
           </div>
 
           <div className="blog-section">
-            <h2 className="blog-section-title">What's Next</h2>
+            <h2 className="blog-section-title">What&apos;s Next</h2>
             <p className="blog-section-body">
               The next steps are: Completing my component library, moving into
               high-fidelity designs and adding pixel art for the puppy and
               accessories (hats, collars, etc.), and then prototyping
-              interactivity, accessibility and usability testing. I'm especially
-              excited to experiment with animations to make the puppy feel alive
-              and responsive.
+              interactivity, accessibility and usability testing. I&apos;m
+              especially excited to experiment with animations to make the puppy
+              feel alive and responsive.
             </p>
             <div className="blog-section-images">
               <div

@@ -27,10 +27,10 @@ export default function Dev() {
           </div>
 
           <p className="blog-section-body">
-            I'm currently learning and building projects with React, Next.js,
-            TypeScript, and React Native. I'm also interested in learning about
-            AI and how it can be used to enhance my work. I'll post projects
-            here as I build and finish them!
+            I&apos;m currently learning and building projects with React,
+            Next.js, TypeScript, and React Native. I&apos;m also interested in
+            learning about AI and how it can be used to enhance my work.
+            I&apos;ll post projects here as I build and finish them!
           </p>
 
           <Divider />
@@ -107,7 +107,7 @@ export default function Dev() {
           <div className="blog-section">
             <h2 className="blog-section-title">GitHub Activity</h2>
             <p className="blog-section-body">
-              Here's a snapshot of my recent development activity and
+              Here&apos;s a snapshot of my recent development activity and
               contributions.
             </p>
             <div className="flex flex-col gap-6 mt-6">

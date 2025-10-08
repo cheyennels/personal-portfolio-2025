@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Button from './components/Button'
 
 export default function NotFound() {
@@ -8,7 +7,7 @@ export default function NotFound() {
         <div className="page-wrapper text-center">
           <h1 className="text-hero text-grey-900">404 - Page Not Found</h1>
           <p className="text-large text-grey-700 mb-8 mt-4">
-            Sorry, the page you're looking for doesn't exist.
+            Sorry, the page you&apos;re looking for doesn&apos;t exist.
           </p>
           <Button href="/">Go back home</Button>
         </div>

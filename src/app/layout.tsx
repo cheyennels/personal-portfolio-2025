@@ -9,7 +9,6 @@ import './styles/responsive.css'
 import Image from 'next/image'
 import treeFooter from '../../public/assets/tree-footer-w.png'
 import Header from './components/Header'
-import Button from './components/Button'
 import type { Metadata } from 'next'
 import { FaGithub, FaLinkedin, FaArrowRight } from 'react-icons/fa'
 
@@ -50,7 +49,7 @@ export default function RootLayout({
           <div className="footer-content">
             <div className="contact-info">
               <a href="/contact" className="footer-link group">
-                Let's Connect
+                Let&apos;s Connect
                 <FaArrowRight />
               </a>
               <div className="contact-links">

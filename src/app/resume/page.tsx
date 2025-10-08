@@ -139,7 +139,7 @@ export default function Resume() {
                   <ul className="education-bullets">
                     <li>GPA: 3.8 (Deans List)</li>
                     <li>
-                      US Bank Hackathon 2019 1st place and People's Choice
+                      US Bank Hackathon 2019 1st place and People&apos;s Choice
                       Winner
                     </li>
                   </ul>
