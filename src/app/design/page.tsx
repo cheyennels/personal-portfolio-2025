@@ -1,8 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import { useState } from 'react'
 import ImageModal from '../components/ImageModal'
+import ImageWithSkeleton from '../components/ImageWithSkeleton'
 import ml1 from '../../../public/assets/design/ml-1.jpeg'
 import ml2 from '../../../public/assets/design/ml-2.jpeg'
 import ml3 from '../../../public/assets/design/ml-3.jpeg'
@@ -107,7 +107,7 @@ export default function Design() {
                   openModal(pps.src, 'Personal portfolio homepage design')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={pps}
                   alt="Personal portfolio homepage design mockup"
                   fill
@@ -119,7 +119,7 @@ export default function Design() {
                   openModal(pps2.src, 'Personal portfolio about page design')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={pps2}
                   alt="Personal portfolio about page design mockup"
                   fill
@@ -131,7 +131,7 @@ export default function Design() {
                   openModal(pps3.src, 'Personal portfolio work page design')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={pps3}
                   alt="Personal portfolio work page design mockup"
                   fill
@@ -143,7 +143,7 @@ export default function Design() {
                   openModal(pps4.src, 'Personal portfolio gallery design')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={pps4}
                   alt="Personal portfolio gallery design mockup"
                   fill
@@ -158,7 +158,7 @@ export default function Design() {
                   )
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={pps5}
                   alt="Personal portfolio illustration page design mockup"
                   fill
@@ -185,7 +185,7 @@ export default function Design() {
                   openModal(ml1.src, 'MLatino Media social media graphic 1')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={ml1}
                   alt="MLatino Media social media graphic design"
                   fill
@@ -197,7 +197,7 @@ export default function Design() {
                   openModal(ml2.src, 'MLatino Media social media graphic 2')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={ml2}
                   alt="MLatino Media event promotion design"
                   fill
@@ -207,7 +207,7 @@ export default function Design() {
                 className="blog-image-square"
                 onClick={() => openModal(ml3.src, 'MLatino Media digital ad')}
               >
-                <Image
+                <ImageWithSkeleton
                   src={ml3}
                   alt="MLatino Media digital advertising design"
                   fill
@@ -219,7 +219,7 @@ export default function Design() {
                   openModal(ml4.src, 'MLatino Media campaign design')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={ml4}
                   alt="MLatino Media campaign graphic design"
                   fill
@@ -231,7 +231,7 @@ export default function Design() {
                   openModal(ml5.src, 'MLatino Media branding materials')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={ml5}
                   alt="MLatino Media branding materials design"
                   fill
@@ -262,25 +262,25 @@ export default function Design() {
               >
                 {/* Images to show here:
               inspiration board, notes/mindmap, or moodboard. */}
-                <Image src={oink1} alt="Oink! 1" fill />
+                <ImageWithSkeleton src={oink1} alt="Oink! 1" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(oink2.src, 'Oink! 2')}
               >
-                <Image src={oink2} alt="Oink! 2" fill />
+                <ImageWithSkeleton src={oink2} alt="Oink! 2" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(oink3.src, 'Oink! 3')}
               >
-                <Image src={oink3} alt="Oink! 3" fill />
+                <ImageWithSkeleton src={oink3} alt="Oink! 3" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(oink4.src, 'Oink! 4')}
               >
-                <Image src={oink4} alt="Oink! 4" fill />
+                <ImageWithSkeleton src={oink4} alt="Oink! 4" fill />
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ export default function Design() {
                 className="blog-image-square"
                 onClick={() => openModal(mcc1.src, 'MCTC event poster design')}
               >
-                <Image
+                <ImageWithSkeleton
                   src={mcc1}
                   alt="Minneapolis Community and Technical College event poster design"
                   fill
@@ -312,19 +312,19 @@ export default function Design() {
                 className="blog-image-square"
                 onClick={() => openModal(mcc2.src, 'MCTC campaign flyer')}
               >
-                <Image src={mcc2} alt="MCTC campaign flyer design" fill />
+                <ImageWithSkeleton src={mcc2} alt="MCTC campaign flyer design" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(mcc3.src, 'MCTC branding materials')}
               >
-                <Image src={mcc3} alt="MCTC branding materials design" fill />
+                <ImageWithSkeleton src={mcc3} alt="MCTC branding materials design" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(mcc4.src, 'MCTC digital graphics')}
               >
-                <Image src={mcc4} alt="MCTC digital graphics design" fill />
+                <ImageWithSkeleton src={mcc4} alt="MCTC digital graphics design" fill />
               </div>
               <div
                 className="blog-image-square"
@@ -332,7 +332,7 @@ export default function Design() {
                   openModal(mcc5.src, 'MCTC promotional materials')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={mcc5}
                   alt="MCTC promotional materials design"
                   fill
@@ -342,7 +342,7 @@ export default function Design() {
                 className="blog-image-square"
                 onClick={() => openModal(mcc6.src, 'MCTC event marketing')}
               >
-                <Image src={mcc6} alt="MCTC event marketing design" fill />
+                <ImageWithSkeleton src={mcc6} alt="MCTC event marketing design" fill />
               </div>
             </div>
           </div>
@@ -364,7 +364,7 @@ export default function Design() {
                   openModal(canDo1.src, 'Can Do Canines brand logo')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={canDo1}
                   alt="Can Do Canines brand logo design"
                   fill
@@ -376,7 +376,7 @@ export default function Design() {
                   openModal(canDo2.src, 'Can Do Canines website mockup')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={canDo2}
                   alt="Can Do Canines website design mockup"
                   fill
@@ -388,7 +388,7 @@ export default function Design() {
                   openModal(canDo3.src, 'Can Do Canines brand book')
                 }
               >
-                <Image
+                <ImageWithSkeleton
                   src={canDo3}
                   alt="Can Do Canines brand book and visual identity guidelines"
                   fill
@@ -415,13 +415,13 @@ export default function Design() {
               >
                 {/* Images to show here:
               inspiration board, notes/mindmap, or moodboard. */}
-                <Image src={quest1} alt="Quest 4 Excellence 1" fill />
+                <ImageWithSkeleton src={quest1} alt="Quest 4 Excellence 1" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(quest2.src, 'Quest 4 Excellence 2')}
               >
-                <Image src={quest2} alt="Quest 4 Excellence 2" fill />
+                <ImageWithSkeleton src={quest2} alt="Quest 4 Excellence 2" fill />
               </div>
             </div>
           </div>
@@ -447,37 +447,37 @@ export default function Design() {
               >
                 {/* Images to show here:
               inspiration board, notes/mindmap, or moodboard. */}
-                <Image src={cw} alt="Mood board 1" fill />
+                <ImageWithSkeleton src={cw} alt="Mood board 1" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(cw2.src, 'Mood board 2')}
               >
-                <Image src={cw2} alt="Mood board 2" fill />
+                <ImageWithSkeleton src={cw2} alt="Mood board 2" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(cw3.src, 'Mood board 3')}
               >
-                <Image src={cw3} alt="Mood board 3" fill />
+                <ImageWithSkeleton src={cw3} alt="Mood board 3" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(cw4.src, 'Mood board 4')}
               >
-                <Image src={cw4} alt="Mood board 4" fill />
+                <ImageWithSkeleton src={cw4} alt="Mood board 4" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(cw5.src, 'Mood board 5')}
               >
-                <Image src={cw5} alt="Mood board 5" fill />
+                <ImageWithSkeleton src={cw5} alt="Mood board 5" fill />
               </div>
               <div
                 className="blog-image-square"
                 onClick={() => openModal(cw6.src, 'Mood board 6')}
               >
-                <Image src={cw6} alt="Mood board 6" fill />
+                <ImageWithSkeleton src={cw6} alt="Mood board 6" fill />
               </div>
             </div>
           </div>

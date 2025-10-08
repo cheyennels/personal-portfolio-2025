@@ -1,10 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import puppies from '../../public/assets/illustration/pixel-art.png'
 import portrait from '../../public/assets/illustration/portrait.jpg'
 import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa'
 import Section from './components/Section'
+import ImageWithSkeleton from './components/ImageWithSkeleton'
 import { useEffect, useRef } from 'react'
 import { useScrollAnimation } from './hooks/useScrollAnimation'
 
@@ -66,19 +66,21 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <Image
+              <ImageWithSkeleton
                 src={portrait}
                 alt="A picture of Cheyenne"
                 width={400}
                 height={400}
                 className="hidden lg:block"
+                priority
               />
               <div className="mask-square block lg:hidden">
-                <Image
+                <ImageWithSkeleton
                   src={portrait}
                   alt="A picture of Cheyenne"
                   width={400}
                   height={400}
+                  priority
                 />
               </div>
             </div>
