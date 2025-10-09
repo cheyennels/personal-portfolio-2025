@@ -517,11 +517,19 @@
 @media (max-width: 768px) {
   .comparison-row {
     grid-template-columns: 1fr;
+
+    padding-bottom: 1rem;
+  }
+
+  .comparison-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
   }
 
   .comparison-cell {
     border-right: none;
-    border-bottom: 1px solid var(--grey-300);
+    border-bottom: 1px solid var(--grey-200);
+    padding: 0.75rem;
   }
 
   .comparison-cell:last-child {
@@ -532,9 +540,33 @@
     display: none;
   }
 
+  /* Category title (first cell) */
   .comparison-cell:first-child {
-    background-color: var(--grey-100);
+    background-color: var(--grey-300);
+    color: var(--grey-900);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Add labels for mobile */
+  .comparison-cell:nth-child(2)::before {
+    content: 'Old Site: ';
     font-weight: 600;
+    color: var(--grey-900);
+  }
+
+  .comparison-cell:nth-child(3)::before {
+    content: 'New Site: ';
+    font-weight: 600;
+    color: var(--grey-900);
+  }
+
+  .comparison-cell:nth-child(4)::before {
+    content: "Why It's Better: ";
+    font-weight: 600;
+    color: var(--grey-900);
   }
 }
 
