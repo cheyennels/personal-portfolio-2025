@@ -28,3 +28,9 @@ export const contactMetadata: Metadata = {
   description:
     'Get in touch with Cheyenne Smith for design and development opportunities. Currently seeking full-time positions in UX/UI design and development.',
 }
+
+export const blogMetadata: Metadata = {
+  title: 'Blog - Cheyenne Smith',
+  description:
+    'Thoughts, insights, and experiences about design, development, and creativity from Cheyenne Smith.',
+}

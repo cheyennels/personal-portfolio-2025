@@ -52,6 +52,9 @@ const NewHeader = memo(function Header() {
             <Link href="/dev" className="nav-link">
               Development
             </Link>
+            <Link href="/blog" className="nav-link">
+              Blog
+            </Link>
             <Link href="/contact" className="nav-link">
               Contact
             </Link>
@@ -115,6 +118,14 @@ const NewHeader = memo(function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Development
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="-mx-3 nav-link block px-3 py-2"
+                    aria-label="Link to blog"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Blog
                   </Link>
                   <Link
                     href="/contact"
