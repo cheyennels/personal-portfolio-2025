@@ -118,7 +118,7 @@ I'm in the process of wireframing and developing pixel art, with the goal of cre
             alt: 'Puppy Pedometer app pixel art illustration',
           }}
           link={{
-            href: '/current-project',
+            href: '/blog/current-project',
             text: 'Learn more about this project',
             target: '_self',
           }}

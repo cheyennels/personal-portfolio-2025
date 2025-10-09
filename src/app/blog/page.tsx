@@ -9,30 +9,37 @@ export const metadata: Metadata = blogMetadata
 // Blog posts data - you can move this to a separate file later
 const blogPosts = [
   {
-    id: 'getting-started-with-nextjs',
-    title: 'Getting Started with Next.js 15',
+    id: 'website-comparison',
+    title: 'Website Comparison: Old vs. New ✨',
     date: '2025-10-09',
     excerpt:
-      'Learn how I built this portfolio using Next.js 15, TypeScript, and modern web development practices.',
-    slug: 'getting-started-with-nextjs',
-    tags: ['Next.js', 'React', 'TypeScript'],
+      "After a layoff, I finally gave my 2020 portfolio a much-needed makeover. Here's what changed and why it matters.",
+    slug: 'website-comparison',
+    tags: ['Web Design', 'Development', 'Portfolio', 'Next.js'],
+  },
+  {
+    id: 'puppy-pedometer-project',
+    title: 'Designing Puppy Pedometer: A Mobile Fitness App',
+    date: '2025-10-09',
+    excerpt:
+      'Take a peek at my current project - a mobile app that makes daily activity fun by encouraging users to get outside and stay active!',
+    slug: 'current-project',
+    tags: ['UX/UI Design', 'Mobile App', 'React Native', 'Figma'],
   },
   // Add more blog posts here
 ]
 
 export default function Blog() {
   return (
-    <div className="whole-page-wrapper">
-      <div className="page-container w-full h-full">
-        <div className="page-wrapper">
-          <div className="page-header">
+    <div className="blog-page-wrapper">
+      <div className="blog-container w-full h-full grid place-content-center gap-16">
+        <div className="blog-wrapper">
+          <div className="blog-header">
             <h1>Blog</h1>
-            <p className="text-large text-grey-700 mt-2">
+            <p className="blog-date">
               Thoughts on design, development, and creativity
             </p>
           </div>
-
-          <Divider />
 
           <div className="blog-posts-grid">
             {blogPosts.length > 0 ? (
@@ -63,7 +70,7 @@ export default function Blog() {
                     className="section-link group mt-4"
                   >
                     Read more
-                    <FaArrowRight className="text-xl group-hover:translate-x-1 transition-transform duration-200" />
+                    <FaArrowRight className="arrow-icon text-xl" />
                   </Link>
                 </article>
               ))
@@ -84,4 +91,3 @@ export default function Blog() {
     </div>
   )
 }
-

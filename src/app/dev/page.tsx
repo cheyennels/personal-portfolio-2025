@@ -3,6 +3,7 @@ import GitHubContributions from '../components/GitHubContributions'
 import GitHubStats from '../components/GitHubStats'
 import { SkeletonCard } from '../components/Skeleton'
 import Divider from '../components/Divider'
+import CurrentDate from '../components/CurrentDate'
 
 import type { Metadata } from 'next'
 import { devMetadata } from '../metadata'
@@ -18,11 +19,7 @@ export default function Dev() {
           <div className="blog-header">
             <h1>Development Work</h1>
             <p className="blog-date">
-              Last updated:{' '}
-              {new Date().toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-              })}
+              Last updated: <CurrentDate />
             </p>
           </div>
 
@@ -65,7 +62,7 @@ export default function Dev() {
               className="section-link group"
             >
               View on GitHub
-              <FaArrowRight className="text-xl group-hover:translate-x-1 transition-transform duration-200" />
+              <FaArrowRight className="arrow-icon text-xl" />
             </a>
           </div>
 
@@ -98,7 +95,7 @@ export default function Dev() {
               className="section-link group"
             >
               View this site
-              <FaArrowRight className="text-xl group-hover:translate-x-1 transition-transform duration-200" />
+              <FaArrowRight className="arrow-icon text-xl" />
             </a>
           </div>
           <Divider />

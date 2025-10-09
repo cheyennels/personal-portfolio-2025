@@ -413,13 +413,8 @@
 
 .blog-post-card {
   padding: 2rem;
-  border: 2px solid var(--grey-300);
+  border: 2px solid var(--grey-900);
   transition: all 0.3s ease;
-}
-
-.blog-post-card:hover {
-  border-color: var(--primary);
-  background-color: var(--grey-100);
 }
 
 .blog-post-header {
@@ -468,10 +463,79 @@
   font-family: var(--font-body);
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
-  background-color: var(--grey-200);
-  color: var(--grey-700);
+  background-color: var(--grey-300);
+  color: var(--grey-900);
   border-radius: 4px;
   font-weight: 500;
+}
+
+/* ==================== Blog Post Styles ==================== */
+.comparison-table {
+  width: 100%;
+  margin: 2rem 0;
+  border: 2px solid var(--grey-900);
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  border-bottom: 1px solid var(--grey-300);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-header {
+  font-weight: 600;
+}
+
+.comparison-cell {
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--grey-900);
+  border-right: 1px solid var(--grey-300);
+}
+
+.comparison-cell:last-child {
+  border-right: none;
+}
+
+.inline-link {
+  color: var(--primary);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.inline-link:hover {
+  color: var(--grey-900);
+}
+
+/* Responsive comparison table */
+@media (max-width: 768px) {
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--grey-300);
+  }
+
+  .comparison-cell:last-child {
+    border-bottom: none;
+  }
+
+  .comparison-header {
+    display: none;
+  }
+
+  .comparison-cell:first-child {
+    background-color: var(--grey-100);
+    font-weight: 600;
+  }
 }
 
 /* ==================== Contact Form Styles ==================== */

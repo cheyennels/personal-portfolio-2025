@@ -1,27 +1,31 @@
 'use client'
 
 import { useState } from 'react'
-import ImageModal from '../components/ImageModal'
-import ImageWithSkeleton from '../components/ImageWithSkeleton'
+import Link from 'next/link'
+import { FaArrowLeft } from 'react-icons/fa'
+import ImageModal from '../../components/ImageModal'
+import ImageWithSkeleton from '../../components/ImageWithSkeleton'
+import CurrentDate from '../../components/CurrentDate'
+import Divider from '../../components/Divider'
 
-import discovery1 from '../../../public/assets/puppy-app/discovery1.png'
-import discovery2 from '../../../public/assets/puppy-app/discovery2.png'
-import discovery3 from '../../../public/assets/puppy-app/discovery3.png'
-import wireframes from '../../../public/assets/puppy-app/wireframes.png'
-import style from '../../../public/assets/puppy-app/style.png'
-import pixelArt from '../../../public/assets/puppy-app/pixel-art.png'
-import moodboard1 from '../../../public/assets/puppy-app/moodboard1.png'
-import moodboard2 from '../../../public/assets/puppy-app/moodboard2.png'
-import components from '../../../public/assets/puppy-app/components.png'
-import splash from '../../../public/assets/puppy-app/splash.png'
-import signup from '../../../public/assets/puppy-app/sign-up.png'
-import dashboard from '../../../public/assets/puppy-app/dashboard.png'
-import screens from '../../../public/assets/puppy-app/screens.png'
-import loficomponents from '../../../public/assets/puppy-app/lo-fi-components.png'
-import wf1 from '../../../public/assets/puppy-app/wf1.png'
-import wf2 from '../../../public/assets/puppy-app/wf2.png'
-import wf3 from '../../../public/assets/puppy-app/wf3.png'
-import banner from '../../../public/assets/puppy-app/banner.png'
+import discovery1 from '../../../../public/assets/puppy-app/discovery1.png'
+import discovery2 from '../../../../public/assets/puppy-app/discovery2.png'
+import discovery3 from '../../../../public/assets/puppy-app/discovery3.png'
+import wireframes from '../../../../public/assets/puppy-app/wireframes.png'
+import style from '../../../../public/assets/puppy-app/style.png'
+import pixelArt from '../../../../public/assets/puppy-app/pixel-art.png'
+import moodboard1 from '../../../../public/assets/puppy-app/moodboard1.png'
+import moodboard2 from '../../../../public/assets/puppy-app/moodboard2.png'
+import components from '../../../../public/assets/puppy-app/components.png'
+import splash from '../../../../public/assets/puppy-app/splash.png'
+import signup from '../../../../public/assets/puppy-app/sign-up.png'
+import dashboard from '../../../../public/assets/puppy-app/dashboard.png'
+import screens from '../../../../public/assets/puppy-app/screens.png'
+import loficomponents from '../../../../public/assets/puppy-app/lo-fi-components.png'
+import wf1 from '../../../../public/assets/puppy-app/wf1.png'
+import wf2 from '../../../../public/assets/puppy-app/wf2.png'
+import wf3 from '../../../../public/assets/puppy-app/wf3.png'
+import banner from '../../../../public/assets/puppy-app/banner.png'
 
 export default function CurrentProject() {
   const [modalImage, setModalImage] = useState<{
@@ -41,13 +45,29 @@ export default function CurrentProject() {
     <div className="blog-page-wrapper">
       <div className="blog-container w-full h-full grid place-content-center gap-16">
         <div className="blog-wrapper">
+          <Link
+            href="/blog"
+            className="section-link group inline-flex items-center mb-6"
+          >
+            <FaArrowLeft className="arrow-icon text-xl mr-2" />
+            Back to Blog
+          </Link>
+
           <div className="blog-header">
             <h1>Current Project - Puppy Pedometer</h1>
-            <p className="blog-date">Last Updated: October 2025</p>
+            <p className="blog-date">
+              Last Updated: <CurrentDate />
+            </p>
+          </div>
+
+          <Divider />
+
+          <div className="blog-section">
             <div className="blog-banner">
               <ImageWithSkeleton src={banner} alt="Banner" fill />
             </div>
           </div>
+
           <div className="blog-section">
             <h2 className="blog-section-title">Project Overview</h2>
             <p className="blog-section-body">
