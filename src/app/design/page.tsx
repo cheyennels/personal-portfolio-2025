@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import ImageModal from '../components/ImageModal'
 import ImageWithSkeleton from '../components/ImageWithSkeleton'
+import CurrentDate from '../components/CurrentDate'
 import ml1 from '../../../public/assets/design/ml-1.jpeg'
 import ml2 from '../../../public/assets/design/ml-2.jpeg'
 import ml3 from '../../../public/assets/design/ml-3.jpeg'
@@ -58,11 +59,7 @@ export default function Design() {
           <div className="blog-header">
             <h1>Design Work</h1>
             <p className="blog-date">
-              Last updated:{' '}
-              {new Date().toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-              })}
+              Last updated: <CurrentDate />
             </p>
           </div>
           <div className="blog-section">
@@ -72,7 +69,7 @@ export default function Design() {
               className="section-link group"
             >
               View my current project here
-              <FaArrowRight className="text-xl group-hover:translate-x-1 transition-transform duration-200" />
+              <FaArrowRight className="arrow-icon text-xl" />
             </a>
           </div>
           <Divider />
@@ -98,7 +95,7 @@ export default function Design() {
               className="section-link group"
             >
               View this site
-              <FaArrowRight className="text-xl group-hover:translate-x-1 transition-transform duration-200" />
+              <FaArrowRight className="arrow-icon text-xl" />
             </a>
             <div className="blog-section-images">
               <div

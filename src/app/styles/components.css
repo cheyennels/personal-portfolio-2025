@@ -1,3 +1,17 @@
+/* ==================== Arrow Animation ==================== */
+.arrow-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.group:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Back arrow (left arrow) animation */
+.group:hover .arrow-icon.mr-2 {
+  transform: translateX(-4px);
+}
+
 /* ==================== Section ==================== */
 .section {
   background-color: var(--foreground);
